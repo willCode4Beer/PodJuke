@@ -1,0 +1,7 @@
+.settings/
+.externalToolBuilders/
+.project
+.rockstarapps
+closure-contrib/
+closure-externs/
+closure-library-read-only/

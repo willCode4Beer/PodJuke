@@ -1,0 +1,5 @@
+# PodJuke - A Packaged Chrome Application for Playing Podcasts
+
+## todo:
+
+write build instructions.....

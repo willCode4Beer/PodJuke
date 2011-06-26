@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>TODO List</title>
+</head>
+<body>
+
+<ul>
+	<li>Replace "add" with top level list</li>
+	<li>Change entries to show only title and expando for description</li>
+	<li>Get hash for entries</li>
+	<li>Use colored bullets to indicate litened/started/unlistened</li>
+	<li>Add filter for above</li>
+	<li>popup for about/help</li>
+	<li>top-right menu links</li>
+	<li>database - list of feeds</li>
+	<li>database - feed entries</li>
+</ul>
+</body>
+</html>
+<!--
+
+db = openDatabase("podcasts", "1.0", "PodcastDB", (5*1000*1000));
+
+db.executeSql(
+	CREATE TABLE IF NOT EXISTS Feeds (id unique, String url, Date lastAccess)
+);
+
+db.executeSql(
+	CREATE TABLE IF NOT EXISTS Entries (id unique, String url, Date lastAccess)
+);
+
+-->

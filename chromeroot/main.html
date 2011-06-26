@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Podcast Jukebox</title>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+<!-- Uncomment below to debug -->
+<!--
+<script type="application/ecmascript" src="js/soyutils.js" ></script>
+<script src="closure-library-read-only/closure/goog/base.js"></script>
+<script type="application/ecmascript" src="js_build/templates.js" ></script>
+<script type="application/ecmascript" src="js/podjuke.js" ></script>
+-->
+<script language="javascript" type="application/ecmascript" src="js_build/app_comp.js" ></script>
+
+<script type="application/ecmascript">
+function startTheApp(){
+	// setup the context menu
+	var ctx = new willcode4beer.ContextMenu();
+	ctx.start('contextMenu');
+	var app = new willcode4beer.PodJuke();
+	app.start('content');
+	document.title = chrome.i18n.getMessage("app_page_title");
+
+	willcode4beer.DataStore.initializeData();
+}
+</script>
+</head>
+
+<body onload="startTheApp()">
+<div id="content"></div>
+<!--
+http://feeds.feedburner.com/thechangelog
+http://pragprog.com/podcasts/feed.rss
+http://feeds.feedburner.com/bigwebshow
+http://feeds.feedburner.com/thepipelineshow
+http://www.sitepoint.com/feed/
+http://feeds.feedburner.com/buildanalyze
+http://feeds.feedburner.com/5by5-devshow
+http://feeds.feedburner.com/founderstalk
+enclosure
+-->
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+	background-color: #999;
+	color: #ccd;
+	font-family: Verdana, sans-serif;
+}
+
+#content {
+	padding: 1em;
+}
+
+#content h1 {
+	font-size: 1.1em;
+	color: #111;
+}
+
+#podcasturllabel {
+	display: none;
+}
+
+#podcasturl {
+	width: 30em;
+}
+
+#fetchBtn {
+	margin-top: 0.5em;
+}
+
+#feedItems {
+	width: 500px;
+	float:left;
+	height: 80%;
+	overflow: auto;
+	border: solid black 1px;
+	padding: 0.5em 0.3em 0.5em 0.3em;
+}
+
+.feedItem {
+	color: #333;
+	padding-bottom: 1em;
+}
+.feedItem:hover {
+	color: #000;
+	background-color: #bbb;
+	cursor: pointer;
+}
+.feedTitle {
+	font-weight: bold;
+	font-size: 1.1em;
+	border-bottom: solid black 1px;
+}
+
+.feedDate {
+	font-size: 0.8em;
+}
+
+.feedDescription {
+	font-size: 0.9em;
+}
+
+div#player-box {
+	float: right;
+	width: 20em;
+	margin-top: -5em;
+	margin-left: auto;
+}
+#nowPlaying{
+	padding-top: 0.3em;
+	font-weight: normal;
+	font-size: 0.9em;
+	color: #000;
+}
+
+.goog-menu {
+	background: #fff;
+	border: solid black 1px;
+	cursor: default;
+	margin: 0;
+	padding: 0.1em;
+	position: absolute;
+	z-index: 9;
+	box-shadow: 3px 3px 10px #88b;
+}
+
+.goog-menuitem {
+	color: #333;
+	font-size: 0.85em;
+	font-family: sans-serif;
+	list-style: none;
+	margin: 0;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	white-space: nowrap;
+}
+
+.goog-menuitem a {
+	color: #333;
+	text-decoration: none;
+}
+
+.goog-menuitem:hover {
+	color: #ddd;
+	background-color: #444;
+}
+
+.goog-menuitem:hover a {
+	color: #ddd;
+	text-decoration: none;
+}
+
+.goog-menuseparator {
+	border-top: 1px solid #f00;
+	margin: 4px 0;
+	padding: 0;
+}

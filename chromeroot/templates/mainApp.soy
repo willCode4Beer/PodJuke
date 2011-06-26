@@ -1,0 +1,45 @@
+{namespace tmpl}
+
+/**
+*/
+{template .mainApp}
+<div id='appWindow'>
+<h1>Podcast Jukebox</h1>
+<form onsubmit="return false;">
+<div>
+<label for="podcasturl" id="podcasturllabel">enter podcast url here</label>
+<input type="text" size="40" id="podcasturl" value="http://feeds.feedburner.com/MusicManumitPodcast-OggFiles" />
+</div>
+<input type="button" value="fetch feed" id="fetchBtn" />
+</form>
+<hr />
+<div id="feedItems"></div>
+</div>
+{/template}
+
+/**
+ * @param itemTitle
+ * @param itemDate
+ * @param itemDescription
+ */
+{template .feedItem autoescape="false"}
+<div class="feedItem">
+	<div class="feedTitle">{$itemTitle}</div>
+	<div class="feedDate">{$itemDate}</div>
+	<div class="feedDescription">{$itemDescription}</div>
+</div>
+{/template}
+
+
+/**
+*/
+{template .player}
+<div id='player-box'>
+	<div id='player'>
+		<audio id="audioTag" controls="controls"></audio>
+	</div>
+	<div id='nowPlaying'></div>
+	<div id='player-queue'>
+	</div>
+</div>
+{/template}

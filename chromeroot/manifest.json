@@ -1,0 +1,21 @@
+{
+	"name": "__MSG_app_name__",
+	"description": "__MSG_app_description__",
+	"version": "1.0",
+	"default_locale" : "en",
+	"app" : {
+		"launch" : {
+			"local_path" : "main.html"
+		}
+	},
+	"icons": {
+		"16": "images/merged_icon_16.png",
+		"48": "images/merged_icon_48.png",
+		"128": "images/merged_icon_128.png"
+	},
+	"permissions": [
+		"unlimitedStorage",
+		"http://*/",
+		"https://*/"
+	]
+}

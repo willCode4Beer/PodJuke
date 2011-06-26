@@ -1,0 +1,43 @@
+<project name="soy-contrib-example" basedir=".">
+
+	<property name="closure-library.dir" value="${basedir}/closure-library-read-only" />
+	<property name="templates-library.dir" value="${basedir}/build/closure-templates/javascript" />
+	<property name="template.src.dir" value="${basedir}/chromeroot/templates" />
+	<property name="templates.js.file" value="${basedir}/chromeroot/generated/templates.js" />
+
+	<target name="all" depends="soyToJs,jscomp">
+	</target>
+
+	<target name="soyToJs" description="Compile Soy templates into Javascript file">
+		<java classname="com.google.template.soy.SoyToJsSrcCompiler" classpath="${basedir}/build/SoyToJsSrcCompiler.jar">
+			<arg value="--outputPathFormat" />
+			<arg value="${basedir}/chromeroot/generated/mainApp.soy.js" />
+			<arg value="${basedir}/chromeroot/templates/mainApp.soy" />
+			<arg value="--shouldProvideRequireSoyNamespaces" />
+		</java>
+	</target>
+
+	<target name="jscomp">
+		<exec executable="${closure-library.dir}/closure/bin/calcdeps.py">
+			<arg line="--compiler_jar build/compiler.jar" />
+			<arg line="--output_mode compiled" />
+			<arg line="--path ${closure-library.dir}" />
+			<arg line="--path ${basedir}/build/soyutils_usegoog.js" />
+			<arg line="--path ${basedir}/chromeroot/generated/" />
+			<arg line='--compiler_flags="--warning_level=VERBOSE"' />
+			<arg line='--compiler_flags="--define=goog.userAgent.ASSUME_WEBKIT=true"' />
+			<arg line='--compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS"' />
+			<arg line="--compiler_flags='--externs=${basedir}/closure-contrib/externs/chrome_extensions.js'" />
+			<arg line="--compiler_flags='--externs=${basedir}/closure-contrib/externs/webkit_console.js'" />
+			<arg line="--input ${basedir}/chromeroot/js/willcode4beer/podjuke.js" />
+			<arg line="--input ${basedir}/chromeroot/js/willcode4beer/context.js" />
+			<arg line="--input ${basedir}/chromeroot/js/willcode4beer/data.js" />
+			<arg line="--output_file ${basedir}/chromeroot/js_build/app_comp.js" />
+		</exec>
+	</target>
+
+	<!-- TODO
+	Target packaged zip file
+	Run python script
+	-->
+</project>

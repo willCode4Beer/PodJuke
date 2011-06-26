@@ -1,0 +1,17 @@
+{
+	"locale":{
+		"message":"en"
+	},
+	"name":{
+		"message":"Pod Juke"
+	},
+	"app_name":{
+		"message":"Pod Juke"
+	},
+	"app_page_title":{
+		"message":"Podcast Jukebox by willCode4Beer"
+	},
+	"app_description":{
+		"message":"Podcast Jukebox: A simple jukebox application for playing and managing podcasts."
+	}
+}
