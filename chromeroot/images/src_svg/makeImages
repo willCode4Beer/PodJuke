@@ -1,7 +1,0 @@
-#!/bin/bash
-
-
-rsvg-convert merged_icon_128.svg > ../merged_icon_128.png
-rsvg-convert merged_icon_48.svg > ../merged_icon_48.png
-rsvg-convert merged_icon_16.svg > ../merged_icon_16.png
-

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+imgDir=../../chromeroot/images
+rsvg-convert merged_icon_128.svg > ${imgDir}/merged_icon_128.png
+rsvg-convert merged_icon_48.svg > ${imgDir}/merged_icon_48.png
+rsvg-convert merged_icon_16.svg > ${imgDir}/merged_icon_16.png
+
