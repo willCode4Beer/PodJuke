@@ -2,4 +2,7 @@
 
 ## todo:
 
+Project Page: http://willcode4beer.github.com/PodJuke/
+
+
 write build instructions.....
